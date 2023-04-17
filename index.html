@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Service de médecine intensive et réanimation du centre hospitalier de Brive La Gaillarde</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		/* styles pour la page */
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-image: url(CHB.jpg);
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			color: #fff;
-		}
+    <title>Service de médecine intensive et réanimation du centre hospitalier de Brive La Gaillarde</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* styles pour la page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
 
-		header {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			text-align: center;
-		}
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-		h1 {
-			margin: 0;
-			font-size: 36px;
-		}
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
 
-		main {
-			max-width: 960px;
-			margin: 0 auto;
-			padding: 20px;
-		}
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-		footer {
-			background-color: #333;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-		}
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
 
-		/* styles pour les liens */
-		a {
-			color: #333;
-			text-decoration: none;
-		}
+        /* styles pour les liens */
+        a {
+            color: #333;
+            text-decoration: none;
+        }
 
-		a:hover {
-			color: #666;
-		}
+        a:hover {
+            color: #666;
+        }
 
-		/* styles pour les boutons */
-		.button {
-			display: inline-block;
-			background-color: #333;
-			color: #fff;
-			padding: 10px 20px;
-			border-radius: 5px;
-			margin-right: 10px;
-			margin-bottom: 10px;
-			font-size: 18px;
-			cursor: pointer;
-		}
+        /* styles pour les boutons */
+        .button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
-		.button:hover {
-			background-color: #666;
-		}
-    /* Animation du titre */
+        .button:hover {
+            background-color: #666;
+        }
+
+        /* styles pour la vidéo en fond d'écran */
+        .bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translate(-50%, -50%);
+        }
+   /* Animation du titre */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -91,15 +99,27 @@
   animation-timing-function: ease-in-out; /* Fonction de temporisation de l'animation */
 }
 
-	</style>
+    </style>
 </head>
 <body>
-	<header>
-		<h1 id="animated-title">Service de réanimation et de médecine intensive du centre hospitalier de Brive La Gaillarde</h1>
+    <video id="bg-video" class="bg-video" autoplay muted>
+        <source src="https://reabrive.github.io/accueil/film.m4v" type="video/mp4">
+        Votre navigateur ne prend pas en charge la vidéo HTML5.
+    </video>
 
-	</header>
-	
-	<main>
+    <script>
+        const video = document.getElementById('bg-video');
+
+        video.addEventListener('ended', () => {
+            video.currentTime = video.duration - 0.01; // définir la position de la dernière image à la fin de la vidéo
+            video.pause();
+        }, false);
+    </script>
+
+    <header>
+        <h1 id="animated-title">Service de réanimation et de médecine intensive du centre hospitalier de Brive La Gaillarde</h1>
+    </header>
+    <main>
 		<p>Bienvenue ! Notre site est dédié à la réanimation du centre hospitalier de Brive La Gaillarde. Ici, vous trouverez des calculateurs-maisons utiles à la pratique clinique ainsi que différents protocoles et vidéos de formation.</p>
 
 		<p>Nous espérons que ces outils vous seront utiles dans votre pratique quotidienne et nous restons à votre disposition pour toute question ou demande d'information supplémentaire.</p>
