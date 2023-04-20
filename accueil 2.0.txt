@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .circle {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-color: #0077cc;
+      border-radius: 50%;
+      margin-right: 20px;
+      animation: rotate 8s linear infinite, colorChange 4s linear infinite;
+    }
+
+    .circle-text {
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      animation: rotate 8s linear infinite;
+    }
+
+    .text-container {
+      text-align: center;
+    }
+
+    .text-container h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #333;
+    }
+
+    .text-container h2 {
+      font-size: 18px;
+      margin: 0;
+      color: #666;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #0077cc;
+      }
+      50% {
+        background-color: #009688;
+      }
+      100% {
+        background-color: #0077cc;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #009688;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+  <title>Logo Service de Réanimation - Hôpital de Brive</title>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="circle">
+      <div class="circle-text">CHB</div>
+    </div>
+    <div class="text-container">
+      <h1>SERVICE DE MEDECINE INTENSIVE ET DE RÉANIMATION</h1>
+      <h2>Hôpital de Brive La Gaillarde</h2>
+    </div>
+  </div>
+  <div class="button-container">
+    <a href="https://reabrive.github.io/CalculateurStewart/" class="button">Accéder au Calculateur des troubles ioniques et GDS (Stewart versus HH)</a>
+    <a href="https://reabrive.github.io/CalculateurPoidsVentilation/" class="button">Accéder au Calculateur Poids théorique-Ventilation minute</a>
+    <a href="https://reabrive.github.io/NorAdMgtoUg/" class="button">Accéder au Convertisseur Noradrénaline mg/h ug/kg/min</a>
+    <a href="https://reabrive.github.io/Thermogard/" class="button">Accéder à la video de mise en place du Thermogard de Zoll</a>
+    <a href="https://reabrive.github.io/AccRech/" class="button">Accéder à la vidéo sur l'accélérateur-réchauffeur du CHB</a>
+    <a href="https://reabrive.github.io/hypona/" class="button">Accéder à l'algorithme diagnostic des hyponatrémies</a>
+    <a href="https://reabrive.github.io/convertisseurLabo/" class="button">Convertisseurs Laboratoire</a>
+    <a href="https://app.sdrapps.fr/home" class="button">Accéder à SDRApps</a>
+    <a href="mailto:rea.brive@gmail.com" class="button">Contact</a>
+  </div>
+  <footer class="footer">
+    Dr Evezard A. - Tous droits réservés. Site optimisé pour une utilisation sur ordinateur de bureau. Si vous utilisez un ordinateur du CHB privilégiez le bureau virtuel (Applidis-AD)
+  </footer>
+  <script>
+    // Ajoutez ici du code JavaScript si vous souhaitez ajouter de l'interactivité ou de l'animation à votre logo.
+  </script>
+</body>
+</html>
